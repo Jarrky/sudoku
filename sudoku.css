@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr {
+    width: 500px;
+}
+
+/* #id */
+#errors {
+    color: coral;
+}
+
+#board {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#digits, #clear, #buttons {
+    width: 450px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#clear {
+    width: 250px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.tile, .number, .submit, .tips, .newGame, .hint, .tile-split-right, .tile-split-left {
+    width: 48px;
+    height: 48px;
+    border: 1px solid lightgray;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-split-left {
+    width: 25px;
+    justify-content: left;
+    align-items: normal;
+    border: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.tile-split-right {
+    width: 25px;
+    justify-content: right;
+    align-items: normal;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+
+.number {
+    border: 1px solid black;
+    margin: 2px;
+    width: 44px;
+    height: 44px;
+}
+
+.submit, .tips, .newGame, .hint {
+    border: 1px solid black;
+    margin: 2px;
+    width: 106.5px;
+    height: 44px;
+}
+
+
+
+.number-selected {
+    background-color: gray;
+}
+
+.tile-selected {
+    background-color: #c0d6ff;
+}
+
+.tile-start{
+    background-color: whitesmoke;
+}
+
+.horizontal-line{
+    border-bottom: 1px solid black;
+}
+
+.vertical-line{
+    border-right: 1px solid black;
+}
+
+
+/* Tablets etc. */
+@media only screen and (min-width: 704px) and (max-width: 1250px) {
+    body {
+    }
+
+    #board {
+        width: 675px;
+        height: 675px;
+    }
+
+    #digits, #clear, #buttons {
+        width: 675px;
+        height: 75px;
+    }
+
+    .tile {
+        width: 73px;
+        height: 73px;
+    }
+
+    .number {
+        width: 69px;
+        width: 69px;
+    }
+
+    .submit, .tips, .newGame, .hint {
+        width: 162.75px;
+    }
+}
+
+/* Phones */
+@media only screen and (max-width: 475px) {
+    body {
+    }
+
+    #board {
+        width: 360px;
+        height: 360px;
+    }
+
+    #digits, #clear, #buttons {
+        width: 360px;
+        height: 40px;
+    }
+
+    .tile {
+        width: 38px;
+        height: 38px;
+    }
+
+    .number {
+        width: 34px;
+        width: 34px;
+    }
+
+    .submit, .tips, .newGame, .hint {
+        width: 84px;
+    }
+
+    .tile-split-left, .tile-split-right {
+        padding: 5px;
+        padding-top: 20px;
+    }
+}
+
+
+/* Overlays */
+#textOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+#winOverlay, #lossOverlay, #tipsOverlay, #hintOverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+}
